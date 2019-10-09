@@ -35,6 +35,13 @@ $("#submit_form").click(function (e) {
     console.log(form_data);
 
     query_form_el.toggleClass('hidden');
-    thank_you_el.toggleClass('hidden')
+    thank_you_el.toggleClass('hidden');
+
+    clearFormData();
 
 });
+
+function clearFormData() {
+    window.form_data = [];
+    window.form_answers = [];
+}
