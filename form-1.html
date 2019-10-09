@@ -6,6 +6,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/form-1.css">
 </head>
 <body class="bg">
@@ -21,15 +22,15 @@
                         <form action="#" method="POST" enctype="multipart/form-data" id="query_form">
 
                             <!-- Question 0 -->
-                            <fieldset class="form-section active">
+                            <fieldset class="form-section active animated zoomIn">
 
-                                <h1>45 Seconds To Apply Below & Pre Qualify!</h1>
+                                <h3 class="text-white">45 Seconds To Apply Below & Pre Qualify!</h3>
 
                                 <br>
 
-                                <h2>Click "Yes" When You're Ready To Begin. *</h2>
+                                <h3>Click "Yes" When You're Ready To Begin. *</h3>
 
-                                <ul class="list-unstyled options-list">
+                                <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
                                     <li>
                                         <button type="button" class="btn btn-primary btn-block" onclick="nextStep(event, { question_id: 0, question: 'Click Yes When You\'re Ready To Begin.', answer: 'Yes' })">Yes</button>
                                     </li>
@@ -39,11 +40,11 @@
                             </fieldset>
 
                             <!-- Question 1 -->
-                            <fieldset class="form-section">
+                            <fieldset class="form-section animated">
 
-                                <h2>Are You Currently Employed? *</h2>
+                                <h3>Are You Currently Employed? *</h3>
 
-                                <ul class="list-unstyled options-list">
+                                <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
 
                                     <li>
                                         <button type="button" class="btn btn-primary btn-block" onclick="nextStep(event, { question_id: 1, question: 'Are You Currently Employed?', answer: 'Yes' })">Yes</button>
@@ -67,11 +68,11 @@
                             </fieldset>
 
                             <!-- Question 2 -->
-                            <fieldset class="form-section">
+                            <fieldset class="form-section animated">
 
-                                <h2>Is This Your First Home Purchase?</h2>
+                                <h3>Is This Your First Home Purchase?</h3>
 
-                                <ul class="list-unstyled options-list">
+                                <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
 
                                     <li>
                                         <button type="button" class="btn btn-primary btn-block" onclick="nextStep(event, { question_id: 2, question: 'Is This Your First Home Purchase?', answer: 'Yes' })">Yes</button>
@@ -86,11 +87,11 @@
                             </fieldset>
 
                             <!-- Question 3 -->
-                            <fieldset class="form-section">
+                            <fieldset class="form-section animated">
 
-                                <h2>What is the Estimated Purchase Price of the Home You Would Like to Buy? *</h2>
+                                <h3>What is the Estimated Purchase Price of the Home You Would Like to Buy? *</h3>
 
-                                <ul class="list-unstyled options-list">
+                                <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
 
                                     <li>
                                         <button type="button" class="btn btn-primary btn-block" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$1 - $100,000' })">$1 - $100,000</button>
@@ -117,11 +118,11 @@
                             </fieldset>
 
                             <!-- Question 4 -->
-                            <fieldset class="form-section">
+                            <fieldset class="form-section animated">
 
-                                <h2>How Would You Rate Your Credit? *</h2>
+                                <h3>How Would You Rate Your Credit? *</h3>
 
-                                <ul class="list-unstyled options-list">
+                                <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
 
                                     <li>
                                         <button type="button" class="btn btn-primary btn-block" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Excellent (781 to 850)' })">Excellent (781 to 850)</button>
@@ -148,11 +149,11 @@
                             </fieldset>
 
                             <!-- Question 5 -->
-                            <fieldset class="form-section">
+                            <fieldset class="form-section animated">
 
-                                <h2>What is Your Estimated Gross Income (Before Taxes)? *</h2>
+                                <h3>What is Your Estimated Gross Income (Before Taxes)? *</h3>
 
-                                <ul class="list-unstyled options-list">
+                                <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
 
                                     <li>
                                         <button type="button" class="btn btn-primary btn-block" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$0 - $50,000' })">$0 - $50,000</button>
@@ -175,11 +176,11 @@
                             </fieldset>
 
                             <!-- Question 6 -->
-                            <fieldset class="form-section">
+                            <fieldset class="form-section animated">
 
-                                <h2>How Soon Would You Like to Buy a Home? *</h2>
+                                <h3>How Soon Would You Like to Buy a Home? *</h3>
 
-                                <ul class="list-unstyled options-list">
+                                <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
 
                                     <li>
                                         <button type="button" class="btn btn-primary btn-block" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home?', answer: '1 - 3 Months' })">1 - 3 Months</button>
@@ -202,11 +203,11 @@
                             </fieldset>
 
                             <!-- Question 7 -->
-                            <fieldset class="form-section">
+                            <fieldset class="form-section animated">
 
-                                <h2>Are You Currently Working with a Realtor? *</h2>
+                                <h3>Are You Currently Working with a Realtor? *</h3>
 
-                                <ul class="list-unstyled options-list">
+                                <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
 
                                     <li>
                                         <button type="button" class="btn btn-primary btn-block" onclick="nextStep(event, { question_id: 7, question: 'Are You Currently Working with a Realtor?', answer: 'Yes' })">Yes</button>
@@ -221,9 +222,9 @@
                             </fieldset>
 
                             <!-- Final Step -->
-                            <fieldset class="form-section">
+                            <fieldset class="form-section animated">
 
-                                <h2>Your Contact Information</h2>
+                                <h3>Your Contact Information</h3>
 
                                 <div class="form-group">
                                     <input type="text" name="name" placeholder="What is your name?" class="form-control" required>

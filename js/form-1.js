@@ -15,8 +15,8 @@ function nextStep(event, answer)
 
     }
 
-    current_step.toggleClass('active');
-    next_step.toggleClass('active');
+    current_step.toggleClass('active').toggleClass('zoomIn');
+    next_step.toggleClass('active').toggleClass('zoomIn');
 
 }
 
