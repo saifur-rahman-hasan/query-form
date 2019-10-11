@@ -15,8 +15,8 @@ function nextStep(event, answer)
 
     }
 
-    current_step.toggleClass('active').toggleClass('zoomIn');
-    next_step.toggleClass('active').toggleClass('zoomIn');
+    current_step.toggleClass('active').toggleClass('fadeIn');
+    next_step.toggleClass('active').toggleClass('fadeIn');
 
 }
 
@@ -58,6 +58,16 @@ $("#submit_form").click(function (e) {
         validation_pass = true;
     }
 
+    if(!ValidateEmail(email)){
+        emailInput.closest('.form-group').addClass('has-error');
+        emailInput.closest('.form-group').find('.help-block').html("Please enter a valid email.");
+        validation_pass = false;
+    }else{
+        emailInput.closest('.form-group').hasClass('has-error').removeClass('has-error');
+        emailInput.closest('.form-group').find('.help-block').html("");
+        validation_pass = true;
+    }
+
     if(!phone){
         phoneInput.closest('.form-group').addClass('has-error');
         phoneInput.closest('.form-group').find('.help-block').html("Please enter your phone number.");
@@ -82,4 +92,9 @@ $("#submit_form").click(function (e) {
 function clearFormData() {
     window.form_data = [];
     window.form_answers = [];
+}
+
+function ValidateEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
 }
