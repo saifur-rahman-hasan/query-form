@@ -63,10 +63,11 @@ body, html {
 
 .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label{
     color: red;
+    text-align: left !important;
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media screen and (max-width: 992px) {
     #query_form .form-section > h3{ font-size: 35px; }
     .btn-group-lg>.btn, .btn-lg{ font-size: 30px; }
     .input-lg{ font-size: 25px; height: 60px; }

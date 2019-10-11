@@ -27,9 +27,9 @@ $("#submit_form").click(function (e) {
     const emailInput = $('input[name=email]');
     const phoneInput = $('input[name=phone]');
 
-    const name = nameInput.val();
-    const email = emailInput.val();
-    const phone = phoneInput.val();
+    let name = nameInput.val();
+    let email = emailInput.val();
+    let phone = phoneInput.val();
 
     form_data['name'] = name;
     form_data['email'] = email;
@@ -38,43 +38,33 @@ $("#submit_form").click(function (e) {
 
     let validation_pass = false;
 
-    if(!name){
-        nameInput.closest('.form-group').addClass('has-error');
-        nameInput.closest('.form-group').find('.help-block').html("Please write your name");
+    if(_.isEmpty(name)){
+        addError(nameInput, "Please enter your name.");
         validation_pass = false;
     }else{
-        nameInput.closest('.form-group').hasClass('has-error').removeClass('has-error');
-        nameInput.closest('.form-group').find('.help-block').html("");
+        clearError(nameInput);
         validation_pass = true;
     }
 
-    if(!email){
-        emailInput.closest('.form-group').addClass('has-error');
-        emailInput.closest('.form-group').find('.help-block').html("Please enter your email.");
+    if(_.isEmpty(email)){
+        addError(emailInput, "Please enter your email.");
+        validation_pass = false;
+    }else if(!validEmail(email)){
+        addError(emailInput, "Please enter a valid email.");
         validation_pass = false;
     }else{
-        emailInput.closest('.form-group').hasClass('has-error').removeClass('has-error');
-        emailInput.closest('.form-group').find('.help-block').html("");
+        clearError(emailInput);
         validation_pass = true;
     }
 
-    if(!ValidateEmail(email)){
-        emailInput.closest('.form-group').addClass('has-error');
-        emailInput.closest('.form-group').find('.help-block').html("Please enter a valid email.");
+    if(_.isEmpty(phone)){
+        addError(phoneInput, "Please enter a your phone number.");
+        validation_pass = false;
+    }else if( ! validPhone(phone) ){
+        addError(phoneInput, "Please enter a valid phone number.");
         validation_pass = false;
     }else{
-        emailInput.closest('.form-group').hasClass('has-error').removeClass('has-error');
-        emailInput.closest('.form-group').find('.help-block').html("");
-        validation_pass = true;
-    }
-
-    if(!phone){
-        phoneInput.closest('.form-group').addClass('has-error');
-        phoneInput.closest('.form-group').find('.help-block').html("Please enter your phone number.");
-        validation_pass = false;
-    }else{
-        phoneInput.closest('.form-group').hasClass('has-error').removeClass('has-error');
-        phoneInput.closest('.form-group').find('.help-block').html("");
+        clearError(phoneInput);
         validation_pass = true;
     }
 
@@ -94,7 +84,31 @@ function clearFormData() {
     window.form_answers = [];
 }
 
-function ValidateEmail(email) {
+function validEmail(input) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    return regex.test(email);
+    return regex.test(input);
+}
+
+
+function validPhone(input)
+{
+    var phone_number = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/;
+
+    return (input.match(phone_number) ? true : false);
+}
+
+function clearError(input) {
+    let form_group = input.closest('.form-group');
+    let help_block = form_group.find('.help-block');
+
+    if(form_group.hasClass('has-error')){
+        form_group.removeClass('has-error');
+        help_block.empty();
+    }
+}
+
+function addError(input, error) {
+    let form_group = input.closest('.form-group');
+    form_group.addClass('has-error');
+    form_group.find('.help-block').html(error);
 }
