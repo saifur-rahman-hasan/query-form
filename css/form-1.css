@@ -66,9 +66,15 @@ body, html {
     text-align: left !important;
 }
 
+.link-white li a{ color: white !important; }
+
 /* Small devices (tablets, 768px and up) */
 @media screen and (max-width: 992px) {
     #query_form .form-section > h3{ font-size: 35px; }
     .btn-group-lg>.btn, .btn-lg{ font-size: 30px; }
     .input-lg{ font-size: 25px; height: 60px; }
+    .h1, h1 {
+        font-size: 76px;
+        margin-bottom: 50px;
+    }
 }

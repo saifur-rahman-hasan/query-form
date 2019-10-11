@@ -9,264 +9,426 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/form-2.css">
 </head>
-<body class="bg">
+<body>
 
-<div class="table-content">
-    <div class="table-center">
+    <header>
+        <div class="brand">
+            <img src="img/logo.png" alt="">
+        </div>
 
+        <div class="contact">
+            Call Us: <br><span>000-000-000</span>
+        </div>
+    </header>
+
+    <div class="body-content">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
 
-                    <!-- Query Form -->
-                    <form action="#" method="POST" enctype="multipart/form-data" id="query_form">
-
-                        <!-- Question 0 -->
-                        <fieldset class="form-section animated fadeIn active">
-
-                            <h3 class="text-white">45 Seconds To Apply Below & Pre Qualify!</h3>
-
-                            <br>
-
-                            <h3>Click "Yes" When You're Ready To Begin. *</h3>
-
-                            <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 0, question: 'Click Yes When You\'re Ready To Begin.', answer: 'Yes' })">Yes</button>
-                                </li>
-                            </ul>
-
-
-                        </fieldset>
-
-                        <!-- Question 1 -->
-                        <fieldset class="form-section animated">
-
-                            <h3>Are You Currently Employed? *</h3>
-
-                            <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 1, question: 'Are You Currently Employed?', answer: 'Yes' })">Yes</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 1, question: 'Are You Currently Employed?', answer: 'No' })">No</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 1, question: 'Are You Currently Employed?', answer: 'Self Employed' })">Self Employed</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 1, question: 'ArRetirede You Currently Employed?', answer: 'Retired' })">Retired</button>
-                                </li>
-
-                            </ul>
-
-
-                        </fieldset>
-
-                        <!-- Question 2 -->
-                        <fieldset class="form-section animated">
-
-                            <h3>Is This Your First Home Purchase?</h3>
-
-                            <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 2, question: 'Is This Your First Home Purchase?', answer: 'Yes' })">Yes</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 2, question: 'Is This Your First Home Purchase?', answer: 'No' })">No</button>
-                                </li>
-
-                            </ul>
-
-                        </fieldset>
-
-                        <!-- Question 3 -->
-                        <fieldset class="form-section animated">
-
-                            <h3>What is the Estimated Purchase Price of the Home You Would Like to Buy? *</h3>
-
-                            <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$1 - $100,000' })">$1 - $100,000</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$100,000 - $200,000' })">$100,000 - $200,000</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$200,000 - $300,000' })">$200,000 - $300,000</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$300,000 - $400,000' })">$300,000 - $400,000</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '400,000+' })">400,000+</button>
-                                </li>
-
-                            </ul>
-
-                        </fieldset>
-
-                        <!-- Question 4 -->
-                        <fieldset class="form-section animated">
-
-                            <h3>How Would You Rate Your Credit? *</h3>
-
-                            <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Excellent (781 to 850)' })">Excellent (781 to 850)</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Very Good (740 to 799)' })">Very Good (740 to 799)</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Good (670 to 739)' })">Good (670 to 739)</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Fair (580 to 669)' })">Fair (580 to 669)</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Poor (less than 580)' })">Poor (less than 580)</button>
-                                </li>
-
-                            </ul>
-
-                        </fieldset>
-
-                        <!-- Question 5 -->
-                        <fieldset class="form-section animated">
-
-                            <h3>What is Your Estimated Gross Income (Before Taxes)? *</h3>
-
-                            <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$0 - $50,000' })">$0 - $50,000</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$50,000 - $75,000' })">$50,000 - $75,000</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$75,000 - $100,000' })">$75,000 - $100,000</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$100,000+' })">$100,000+</button>
-                                </li>
-
-                            </ul>
-
-                        </fieldset>
-
-                        <!-- Question 6 -->
-                        <fieldset class="form-section animated">
-
-                            <h3>How Soon Would You Like to Buy a Home? *</h3>
-
-                            <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home?', answer: '1 - 3 Months' })">1 - 3 Months</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home?', answer: '3 - 6 Months' })">3 - 6 Months</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home? *', answer: '6 - 12 Months' })">6 - 12 Months</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home? *', answer: '12 Months+' })">12 Months+</button>
-                                </li>
-
-                            </ul>
-
-                        </fieldset>
-
-                        <!-- Question 7 -->
-                        <fieldset class="form-section animated">
-
-                            <h3>Are You Currently Working with a Realtor? *</h3>
-
-                            <ul class="list-unstyled options-list col-md-6 col-md-offset-3">
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 7, question: 'Are You Currently Working with a Realtor?', answer: 'Yes' })">Yes</button>
-                                </li>
-
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg" onclick="nextStep(event, { question_id: 7, question: 'Are You Currently Working with a Realtor?', answer: 'No' })">No</button>
-                                </li>
-
-                            </ul>
-
-                        </fieldset>
-
-                        <!-- Final Step -->
-                        <fieldset class="form-section animated">
-
-                            <h3>Your Contact Information</h3>
-
-                            <div class="form-group">
-                                <input type="text" name="name" placeholder="What is your name?" class="form-control input-lg" required>
-                                <span class="help-block"></span>
+            <form action="#" method="POST" enctype="multipart/form-data" id="query_form">
+
+                <!-- Step - 1 -->
+                <div id="step_1" class="sec-question animated">
+
+                    <h1 class="question text-center">Are You Currently Employed? *</h1>
+
+                    <div class="answers">
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 1, question: 'Are You Currently Employed?', answer: 'Yes' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Yes</div>
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="Your email" class="form-control input-lg" required>
-                                <span class="help-block"></span>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 1, question: 'Are You Currently Employed?', answer: 'No' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">No</div>
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <input type="text" name="phone" placeholder="Your phone number" class="form-control input-lg" required>
-                                <span class="help-block"></span>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 1, question: 'Are You Currently Employed?', answer: 'Self Employed' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Self Employed</div>
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <button type="button" class="btn btn-block btn-primary btn-lg" id="submit_form">Submit</button>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 1, question: 'Are You Currently Employed?', answer: 'Retired' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Retired</div>
+                                </div>
                             </div>
-
-                        </fieldset>
-
-                    </form>
-
-                    <!-- Thank you section -->
-                    <div class="panel panel-body hidden" id="thank_you_section">
-
-                        <img src="img/check.png" width="120">
-
-                        <h3>Thanks, we will contact with you soon.</h3>
+                        </div>
                     </div>
 
                 </div>
+
+                <!-- Step - 2 -->
+                <div id="step_2" class="sec-question animated hidden">
+
+                    <h1 class="question text-center">Is This Your First Home Purchase?</h1>
+
+                    <div class="answers">
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 2, question: 'Is This Your First Home Purchase?', answer: 'Yes' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Yes</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 2, question: 'Is This Your First Home Purchase?', answer: 'No' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">No</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Step - 3 -->
+                <div id="step_3" class="sec-question animated hidden">
+
+                    <h1 class="question text-center">What is the Estimated Purchase Price of the Home You Would Like to Buy? *</h1>
+
+                    <div class="answers">
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$1 - $100,000' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">$1 - $100,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$100,000 - $200,000' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">$100,000 - $200,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$200,000 - $300,000' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">$200,000 - $300,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '$300,000 - $400,000' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">$300,000 - $400,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 3, question: 'What is the Estimated Purchase Price of the Home You Would Like to Buy?', answer: '400,000+' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">400,000+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Step - 4 -->
+                <div id="step_4" class="sec-question animated hidden">
+
+                    <h1 class="question text-center">How Would You Rate Your Credit? *</h1>
+
+                    <div class="answers">
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Excellent (781 to 850)' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Excellent (781 to 850)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Very Good (740 to 799)' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Very Good (740 to 799)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Good (670 to 739)' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Good (670 to 739)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Fair (580 to 669)' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Fair (580 to 669)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 4, question: 'How Would You Rate Your Credit?', answer: 'Poor (less than 580)' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Poor (less than 580)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Step - 5 -->
+                <div id="step_5" class="sec-question animated hidden">
+
+                    <h1 class="question text-center">What is Your Estimated Gross Income (Before Taxes)? *</h1>
+
+                    <div class="answers">
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$0 - $50,000' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">$0 - $50,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$50,000 - $75,000' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">$50,000 - $75,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$75,000 - $100,000' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">$75,000 - $100,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 5, question: 'What is Your Estimated Gross Income (Before Taxes)?', answer: '$100,000+' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">$100,000+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Step - 6 -->
+                <div id="step_6" class="sec-question animated hidden">
+
+                    <h1 class="question text-center">How Soon Would You Like to Buy a Home? *</h1>
+
+                    <div class="answers">
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home?', answer: '1 - 3 Months' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">1 - 3 Months</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home?', answer: '3 - 6 Months' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">3 - 6 Months</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home? *', answer: '6 - 12 Months' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">6 - 12 Months</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 6, question: 'How Soon Would You Like to Buy a Home? *', answer: '12 Months+' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">12 Months+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Step - 7 -->
+                <div id="step_7" class="sec-question animated hidden">
+
+                    <h1 class="question text-center">Are You Currently Working with a Realtor? *</h1>
+
+                    <div class="answers">
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 7, question: 'Are You Currently Working with a Realtor?', answer: 'Yes' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">Yes</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-control" onclick="nextStep(event, { question_id: 7, question: 'Are You Currently Working with a Realtor?', answer: 'No' })">
+                            <div class="radio-control-inner">
+                                <div class="radio-control-content">
+                                    <div class="radio-content-icon">
+                                        <img src="img/home-1.png" alt="">
+                                    </div>
+                                    <div class="option-text">No</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Step - 8 (Final) -->
+                <div id="step_8" class="sec-question animated hidden">
+
+                    <h1 class="question text-center">Your Contact Information</h1>
+
+                    <div class="answers">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="What is your name?" class="form-control input-lg" required>
+                            <span class="help-block"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your email" class="form-control input-lg" required>
+                            <span class="help-block"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="phone" placeholder="Your phone number" class="form-control input-lg" required>
+                            <span class="help-block"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-block btn-primary btn-lg" id="submit_form">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+
+            <!-- Thank you section -->
+            <div class="panel panel-body text-center hidden" id="thank_you_section">
+
+                <img src="img/check.png" width="120">
+
+                <h3>Thanks, we will contact with you soon.</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-center">
+
+        <h4>Call Us: 000-000-000</h4>
+
+        <ul class="list-inline link-white">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+
+    </footer>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="cover-img"></div>
+                    <div class="modal-body text-center">
+                        <h3>45 Seconds To Apply Below & Pre Qualify!</h3>
+                        <br>
+                        <h4>Click "Yes" When You're Ready To Begin. *</h4>
+                        <br>
+                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Yes I am ready</button>
+                    </p>
+                </div>
             </div>
         </div>
-
     </div>
-</div>
 
-
-<!-- Java scripts -->
-<script src="js/jquery.min.js"></script>
-<script src="js/form-2.js"></script>
+    <!-- Java scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/form-2.js"></script>
 </body>
 </html>

@@ -4,6 +4,12 @@ const thank_you_el = $("#thank_you_section");
 window.form_answers = [];
 window.form_data = [];
 
+/**
+ * Show the Next Step
+ *
+ * @param event
+ * @param answer
+ */
 function nextStep(event, answer)
 {
     const current_step = $(event.currentTarget).closest('fieldset');
@@ -20,6 +26,9 @@ function nextStep(event, answer)
 
 }
 
+/**
+ * Perform the Form Submit Action
+ */
 $("#submit_form").click(function (e) {
     e.preventDefault();
 
@@ -79,17 +88,31 @@ $("#submit_form").click(function (e) {
 
 });
 
+/**
+ * Clear Form Data
+ */
 function clearFormData() {
     window.form_data = [];
     window.form_answers = [];
 }
 
+/**
+ * Check the given input is a valid email
+ *
+ * @param input
+ * @returns {boolean}
+ */
 function validEmail(input) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(input);
 }
 
-
+/**
+ * Check the Given Input is a valid mobile number
+ *
+ * @param input
+ * @returns {boolean}
+ */
 function validPhone(input)
 {
     var phone_number = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/;
@@ -97,6 +120,11 @@ function validPhone(input)
     return (input.match(phone_number) ? true : false);
 }
 
+/**
+ * Clear the errors from the form inputs
+ *
+ * @param input
+ */
 function clearError(input) {
     let form_group = input.closest('.form-group');
     let help_block = form_group.find('.help-block');
@@ -107,6 +135,12 @@ function clearError(input) {
     }
 }
 
+/**
+ * Add a new Error for a form input
+ *
+ * @param input
+ * @param error
+ */
 function addError(input, error) {
     let form_group = input.closest('.form-group');
     form_group.addClass('has-error');
