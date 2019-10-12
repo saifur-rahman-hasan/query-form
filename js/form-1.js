@@ -21,8 +21,9 @@ function nextStep(event, answer)
 
     }
 
-    current_step.toggleClass('active').toggleClass('fadeIn');
-    next_step.toggleClass('active').toggleClass('fadeIn');
+    current_step.slideUp(500, function(){
+        next_step.slideDown(500);
+    });
 
 }
 

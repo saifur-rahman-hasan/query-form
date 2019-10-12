@@ -93,10 +93,10 @@ header .contact span {
 }
 
 .radio-content-icon{
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 .radio-content-icon img{ width: 100%; }
 
