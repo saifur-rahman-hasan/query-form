@@ -138,3 +138,24 @@ footer{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
+@media screen and (max-width: 800px) {
+    .answers{ margin: 3em auto; }
+    .radio-control{
+        width: 105px;
+        height: 105px;
+    }
+    .radio-control-inner{
+        left: 50%;
+    }
+    .radio-content-icon{
+        width: 40px;
+        height: 40px;
+        margin: 5px auto;
+    }
+    .option-text{
+        font-size: 11px;
+    }
+    .question{ font-size: 25px; }
+    .contact{ display: none; }
+}
